@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 500 800;
+}
+:root {
+  box-sizing: border-box;
+  --background-color-primary: hsl(47, 88%, 63%);
+  --background-color-white: hsl(0, 0%, 100%);
+  --color-gray-950: hsl(0, 0%, 7%);
+  --color-gray-500: hsl(0, 0%, 42%);
+  --font-weight-bold: 800;
+  --font-weight-medium: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--background-color-primary);
+  font-family: "Figtree", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
