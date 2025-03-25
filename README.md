@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor]()
-- Live Site URL: [Github Pages](https://www.ckharrison.github.io/blog-preview-card)
+- Live Site URL: [Github Pages](https://ckharrison.github.io/blog-preview-card/)
 
 ## My process
 
