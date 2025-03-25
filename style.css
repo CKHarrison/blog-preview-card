@@ -1,3 +1,4 @@
+/* Typography */
 @font-face {
   font-family: "Figtree";
   src: url("/assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
@@ -10,8 +11,23 @@
   --background-color-white: hsl(0, 0%, 100%);
   --color-gray-950: hsl(0, 0%, 7%);
   --color-gray-500: hsl(0, 0%, 42%);
+  --color-yellow: hsl(47, 88%, 63%);
+  --font-family: "Figtree";
   --font-weight-bold: 800;
   --font-weight-medium: 500;
+  --font-size-large: 1.5rem;
+  --font-size-medium: 1rem;
+  --font-size-small: 0.875rem;
+  --default-line-height: 150%;
+
+  /* Following font shorthand property order: font-style font-variant font-weight font-size/line-height font-family; */
+  --text-preset-1: var(--font-weight-bold) var(--font-size-large) / var(--default-line-height) var(--font-family);
+
+  --text-preset-2: var(--font-weight-medium) var(--font-size-medium) / var(--default-line-height) var(--font-family);
+
+  --text-preset-3: var(--font-weight-medium) var(--font-size-small) / var(--default-line-height) var(--font-family);
+
+  --text-preset-3-bold: var(--font-weight-bold) var(--font-size-small) / var(--default-line-height) var(--font-family);
 }
 
 *,
@@ -20,6 +36,8 @@
   box-sizing: inherit;
 }
 
+/* General Styling */
+
 body {
   margin: 0 auto;
   background-color: var(--background-color-primary);
@@ -27,5 +45,105 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
   height: 100vh;
+}
+
+img,
+h2,
+p {
+  margin: 0;
+}
+
+p,
+h2 {
+  letter-spacing: 0px;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: var(--color-gray-950);
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--color-yellow);
+}
+
+/* Containers */
+
+.blog-preview-container {
+  background-color: var(--background-color-white);
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 8px 8px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2em;
+  padding: 2em;
+  width: 100%;
+  max-width: 360px;
+}
+.blog-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75em;
+  width: 100%;
+}
+
+.blog-author-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.blog-preview-image {
+  border-radius: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+.blog-tag {
+  background-color: var(--background-color-primary);
+  border-radius: 5px;
+  font: var(--text-preset-3-bold);
+  padding: 0.8em 1.3em;
+}
+
+.publish-date {
+  color: var(--color-gray-950);
+  font: var(--text-preset-3);
+}
+
+.blog-title {
+  color: var(--color-gray-950);
+  font: var(--text-preset-1);
+  font-size: 1.5rem;
+}
+
+.blog-info-text {
+  color: var(--color-gray-500);
+  font: var(--text-preset-2);
+}
+
+.author-image {
+  width: 2em;
+}
+
+.author-name {
+  font: var(--text-preset-3-bold);
+}
+
+@media (min-width: 720px) {
+  .blog-preview-container {
+    max-width: 400px;
+  }
 }
